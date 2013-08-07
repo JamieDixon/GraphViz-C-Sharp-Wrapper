@@ -20,7 +20,9 @@ var registerLayoutPluginCommand = new RegisterLayoutPluginCommand();
 
 // GraphVizWrapper can be injected via the IGraphVizWrapper interface
 
-var wrapper = new GraphVizWrapper(getStartProcessQuery, getProcessStartInfoQuery, registerLayoutPluginCommand);
+var wrapper = new GraphVizWrapper(getStartProcessQuery, 
+								  getProcessStartInfoQuery, 
+								  registerLayoutPluginCommand);
 
 byte[] output = wrapper.GenerateGraph("digraph{a -> b; b -> c; c -> a;}", Enums.GraphReturnType.Png);
 ```
