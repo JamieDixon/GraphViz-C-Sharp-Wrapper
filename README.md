@@ -26,3 +26,5 @@ var wrapper = new GraphGeneration(getStartProcessQuery,
 
 byte[] output = wrapper.GenerateGraph("digraph{a -> b; b -> c; c -> a;}", Enums.GraphReturnType.Png);
 ```
+
+To build on the command line run /build/build.bat
