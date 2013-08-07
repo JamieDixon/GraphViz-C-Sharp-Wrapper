@@ -1,0 +1,450 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="CFEC60DC-14E0-47E4-A60E-8919FB5FEF5D/f:Enums.cs" caret="246" fromTop="13" />
+      <File id="CFEC60DC-14E0-47E4-A60E-8919FB5FEF5D/d:Interfaces/f:IFactory.cs" caret="114" fromTop="6" />
+      <File id="CFEC60DC-14E0-47E4-A60E-8919FB5FEF5D/d:Interfaces/f:ICommand.cs" caret="101" fromTop="4" />
+      <File id="CFEC60DC-14E0-47E4-A60E-8919FB5FEF5D/d:Interfaces/f:IGraphVizWrapper.cs" caret="223" fromTop="5" />
+      <File id="CFEC60DC-14E0-47E4-A60E-8919FB5FEF5D/d:Interfaces/f:Commands.cs" caret="103" fromTop="2" />
+      <File id="CFEC60DC-14E0-47E4-A60E-8919FB5FEF5D/f:ProcessStartInfoWrapper.cs" caret="519" fromTop="15" />
+      <File id="CFEC60DC-14E0-47E4-A60E-8919FB5FEF5D/d:Interfaces/f:IQuery.cs" caret="145" fromTop="5" />
+      <File id="CFEC60DC-14E0-47E4-A60E-8919FB5FEF5D/d:Interfaces/f:Queries.cs" caret="25" fromTop="0" />
+      <File id="CFEC60DC-14E0-47E4-A60E-8919FB5FEF5D/d:Queries/f:GetProcessStartInfoQuery.cs" caret="144" fromTop="4" />
+      <File id="CFEC60DC-14E0-47E4-A60E-8919FB5FEF5D/d:Licences/f:GraphVizLicence.txt" caret="0" fromTop="0" />
+      <File id="B561F813-067D-4602-8786-CD680154879A/f:Tests.cs" caret="0" fromTop="0" />
+      <File id="CFEC60DC-14E0-47E4-A60E-8919FB5FEF5D/d:Commands/f:RegisterLayoutPluginCommand.cs" caret="600" fromTop="14" />
+      <File id="CFEC60DC-14E0-47E4-A60E-8919FB5FEF5D/d:Interfaces/f:IProcessStartInfoWrapper.cs" caret="0" fromTop="0" />
+      <File id="CFEC60DC-14E0-47E4-A60E-8919FB5FEF5D/d:Queries/f:GetStartProcessQuery.cs" caret="139" fromTop="5" />
+      <File id="CFEC60DC-14E0-47E4-A60E-8919FB5FEF5D/f:GraphVizWrapper.cs" caret="1752" fromTop="34" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="CFEC60DC-14E0-47E4-A60E-8919FB5FEF5D/f:ProcessStartInfoWrapper.cs" caret="0" fromTop="0" />
+      <File id="CFEC60DC-14E0-47E4-A60E-8919FB5FEF5D/d:Queries/f:GetProcessStartInfoQuery.cs" caret="941" fromTop="17" />
+      <File id="CFEC60DC-14E0-47E4-A60E-8919FB5FEF5D/d:Interfaces/f:IQuery.cs" caret="145" fromTop="5" />
+      <File id="CFEC60DC-14E0-47E4-A60E-8919FB5FEF5D/f:GraphVizWrapper.cs" caret="353" fromTop="14" />
+      <File id="CFEC60DC-14E0-47E4-A60E-8919FB5FEF5D/f:GraphVizWrapper.cs" caret="3350" fromTop="20" />
+      <File id="CFEC60DC-14E0-47E4-A60E-8919FB5FEF5D/f:GraphVizWrapper.cs" caret="1912" fromTop="3" />
+      <File id="CFEC60DC-14E0-47E4-A60E-8919FB5FEF5D/f:GraphVizWrapper.cs" caret="3350" fromTop="17" />
+      <File id="CFEC60DC-14E0-47E4-A60E-8919FB5FEF5D/f:GraphVizWrapper.cs" caret="3350" fromTop="16" />
+      <File id="CFEC60DC-14E0-47E4-A60E-8919FB5FEF5D/d:Queries/f:GetStartProcessQuery.cs" caret="298" fromTop="18" />
+      <File id="CFEC60DC-14E0-47E4-A60E-8919FB5FEF5D/d:Queries/f:GetStartProcessQuery.cs" caret="298" fromTop="11" />
+      <File id="CFEC60DC-14E0-47E4-A60E-8919FB5FEF5D/d:Queries/f:GetStartProcessQuery.cs" caret="202" fromTop="7" />
+      <File id="CFEC60DC-14E0-47E4-A60E-8919FB5FEF5D/d:Interfaces/f:Queries.cs" caret="138" fromTop="5" />
+      <File id="CFEC60DC-14E0-47E4-A60E-8919FB5FEF5D/d:Interfaces/f:Queries.cs" caret="25" fromTop="0" />
+      <File id="CFEC60DC-14E0-47E4-A60E-8919FB5FEF5D/f:GraphVizWrapper.cs" caret="3210" fromTop="32" />
+      <File id="CFEC60DC-14E0-47E4-A60E-8919FB5FEF5D/f:GraphVizWrapper.cs" caret="3187" fromTop="31" />
+      <File id="CFEC60DC-14E0-47E4-A60E-8919FB5FEF5D/d:Commands/f:RegisterLayoutPluginCommand.cs" caret="212" fromTop="5" />
+      <File id="CFEC60DC-14E0-47E4-A60E-8919FB5FEF5D/d:Commands/f:RegisterLayoutPluginCommand.cs" caret="586" fromTop="11" />
+      <File id="CFEC60DC-14E0-47E4-A60E-8919FB5FEF5D/d:Commands/f:RegisterLayoutPluginCommand.cs" caret="1074" fromTop="22" />
+      <File id="CFEC60DC-14E0-47E4-A60E-8919FB5FEF5D/d:Commands/f:RegisterLayoutPluginCommand.cs" caret="678" fromTop="16" />
+      <File id="B561F813-067D-4602-8786-CD680154879A/f:Tests.cs" caret="1165" fromTop="16" />
+      <File id="B561F813-067D-4602-8786-CD680154879A/f:Tests.cs" caret="1430" fromTop="21" />
+      <File id="B561F813-067D-4602-8786-CD680154879A/f:Tests.cs" caret="440" fromTop="6" />
+      <File id="B561F813-067D-4602-8786-CD680154879A/f:Tests.cs" caret="741" fromTop="13" />
+      <File id="B561F813-067D-4602-8786-CD680154879A/f:Tests.cs" caret="888" fromTop="20" />
+      <File id="B561F813-067D-4602-8786-CD680154879A/f:Tests.cs" caret="1544" fromTop="33" />
+      <File id="CFEC60DC-14E0-47E4-A60E-8919FB5FEF5D/f:GraphVizWrapper.cs" caret="627" fromTop="19" />
+      <File id="CFEC60DC-14E0-47E4-A60E-8919FB5FEF5D/f:GraphVizWrapper.cs" caret="127" fromTop="4" />
+      <File id="CFEC60DC-14E0-47E4-A60E-8919FB5FEF5D/f:GraphVizWrapper.cs" caret="2982" fromTop="33" />
+      <File id="CFEC60DC-14E0-47E4-A60E-8919FB5FEF5D/f:GraphVizWrapper.cs" caret="3365" fromTop="42" />
+      <File id="CFEC60DC-14E0-47E4-A60E-8919FB5FEF5D/f:GraphVizWrapper.cs" caret="2343" fromTop="12" />
+    </RecentEdits>
+  </RecentFiles>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir IsNull="False">
+    </NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Default">
+      <Item value="public" priority="20" />
+      <Item value="class" priority="1" />
+      <Item value="void" priority="10" />
+      <Item value="var" priority="61" />
+      <Item value="new" priority="57" />
+      <Item value="Process`0" priority="10" />
+      <Item value="processStartInfo" priority="20" />
+      <Item value="process" priority="50" />
+      <Item value="string" priority="43" />
+      <Item value="return" priority="17" />
+      <Item value="GraphVizWrapper" priority="3" />
+      <Item value="wrapper" priority="2" />
+      <Item value="dotFile" priority="0" />
+      <Item value="Assert`0" priority="5" />
+      <Item value="result" priority="0" />
+      <Item value="Test" priority="0" />
+      <Item value="true" priority="22" />
+      <Item value="UseShellExecute" priority="6" />
+      <Item value="RedirectStandardOutput" priority="3" />
+      <Item value="TraceEventCache`0" priority="0" />
+      <Item value="CreateNoWindow" priority="4" />
+      <Item value="while" priority="7" />
+      <Item value="ConsoleTraceListener`0" priority="0" />
+      <Item value="output" priority="20" />
+      <Item value="byte" priority="15" />
+      <Item value="enum" priority="1" />
+      <Item value="GraphReturnType`0" priority="1" />
+      <Item value="returnType" priority="5" />
+      <Item value="Png" priority="0" />
+      <Item value="using" priority="5" />
+      <Item value="System" priority="3" />
+      <Item value="Open" priority="0" />
+      <Item value="x" priority="13" />
+      <Item value="Length" priority="8" />
+      <Item value="tempOut" priority="1" />
+      <Item value="false" priority="3" />
+      <Item value="Directory`0" priority="4" />
+      <Item value="dir" priority="0" />
+      <Item value="graphName" priority="0" />
+      <Item value="fileOutputName" priority="3" />
+      <Item value="fileStream" priority="0" />
+      <Item value="Enums" priority="0" />
+      <Item value="Enums`0" priority="5" />
+      <Item value="nameValues" priority="0" />
+      <Item value="fileType" priority="0" />
+      <Item value="Read" priority="1" />
+      <Item value="Thread`0" priority="1" />
+      <Item value="File`0" priority="9" />
+      <Item value="workingDir" priority="2" />
+      <Item value="outputDir" priority="1" />
+      <Item value="const" priority="0" />
+      <Item value="fileFinalLocation" priority="3" />
+      <Item value="if" priority="1" />
+      <Item value="fileFinalDir" priority="1" />
+      <Item value="outputLine" priority="1" />
+      <Item value="fileContent" priority="0" />
+      <Item value="DataReceivedEventHandler" priority="0" />
+      <Item value="static" priority="13" />
+      <Item value="object" priority="1" />
+      <Item value="DataReceivedEventArgs`0" priority="1" />
+      <Item value="OutputDataReceived`0" priority="0" />
+      <Item value="e" priority="1" />
+      <Item value="str" priority="1" />
+      <Item value="Bla`0" priority="0" />
+      <Item value="RedirectStandardError" priority="3" />
+      <Item value="baseStream" priority="10" />
+      <Item value="Stream`0" priority="1" />
+      <Item value="base" priority="5" />
+      <Item value="loop" priority="0" />
+      <Item value="out" priority="0" />
+      <Item value="line" priority="0" />
+      <Item value="BinaryReader`0" priority="0" />
+      <Item value="BinaryReader" priority="0" />
+      <Item value="ReadFully`0" priority="1" />
+      <Item value="RenderingEngine" priority="0" />
+      <Item value="Environment`0" priority="0" />
+      <Item value="Path`0" priority="1" />
+      <Item value="this" priority="0" />
+      <Item value="Web" priority="2" />
+      <Item value="HttpServerUtility`0" priority="0" />
+      <Item value="HttpContext`0" priority="0" />
+      <Item value="theDirectory" priority="0" />
+      <Item value="appPath" priority="1" />
+      <Item value="Is`0" priority="3" />
+      <Item value="private" priority="13" />
+      <Item value="bool" priority="6" />
+      <Item value="readonly" priority="1" />
+      <Item value="ProcessFolder" priority="1" />
+      <Item value="AppPath" priority="0" />
+      <Item value="ConfigExists`0" priority="0" />
+      <Item value="RegisterLayoutPlugin`0" priority="0" />
+      <Item value="ProcessStartInfo`0" priority="8" />
+      <Item value="IProcessFactory`0" priority="1" />
+      <Item value="GraphVizWrapper`0" priority="1" />
+      <Item value="processFactory" priority="1" />
+      <Item value="_processFactory" priority="1" />
+      <Item value="IFactory" priority="1" />
+      <Item value="Process" priority="8" />
+      <Item value="_processWrapper" priority="2" />
+      <Item value="ProcessStartInfo" priority="4" />
+      <Item value="FileName" priority="4" />
+      <Item value="IProcessStartInfoFactory`0" priority="8" />
+      <Item value="processStartInfoFactory" priority="13" />
+      <Item value="_processStartInfoFactory" priority="5" />
+      <Item value="FilePath" priority="0" />
+      <Item value="IProcessWrapper`0" priority="5" />
+      <Item value="DynamicMock`0" priority="6" />
+      <Item value="typeof" priority="7" />
+      <Item value="processWrapper" priority="11" />
+      <Item value="char" priority="0" />
+      <Item value="ProcessStartInfoFactory`0" priority="2" />
+      <Item value="ProcessWrapper`0" priority="2" />
+      <Item value="_appPath" priority="0" />
+      <Item value="path" priority="1" />
+      <Item value="TypeAttributes`0" priority="0" />
+      <Item value="Assembly`0" priority="0" />
+      <Item value="IServiceProvider`0" priority="0" />
+      <Item value="where" priority="0" />
+      <Item value="IGraphVizWrapper`0" priority="0" />
+      <Item value="Uri`0" priority="2" />
+      <Item value="codeBase" priority="1" />
+      <Item value="UriBuilder`0" priority="0" />
+      <Item value="uriBuilder" priority="1" />
+      <Item value="UriBuilder" priority="0" />
+      <Item value="GetDirectoryPathOfAssembly`0" priority="0" />
+      <Item value="NUnit" priority="0" />
+      <Item value="mockWrapper" priority="1" />
+      <Item value="DebuggerBrowsableAttribute`0" priority="0" />
+      <Item value="StreamWriter" priority="0" />
+      <Item value="type" priority="1" />
+      <Item value="Arguments" priority="3" />
+      <Item value="RedirectStandardInput" priority="2" />
+      <Item value="Diagnostics" priority="2" />
+      <Item value="processMock" priority="6" />
+      <Item value="processStartInfoFactoryMock" priority="5" />
+      <Item value="IProcessStartInfo`0" priority="7" />
+      <Item value="procesStartInfoMock" priority="10" />
+      <Item value="processStartInfoMockInstance" priority="1" />
+      <Item value="SetUp" priority="0" />
+      <Item value="ThreadStaticAttribute`0" priority="0" />
+      <Item value="T`0" priority="1" />
+      <Item value="interface" priority="5" />
+      <Item value="ICommand`0" priority="0" />
+      <Item value="_renderingEngine" priority="0" />
+      <Item value="_registerLayoutPlugincommand" priority="1" />
+      <Item value="registerLayoutPlugincommand" priority="0" />
+      <Item value="Mock`0" priority="6" />
+      <Item value="m" priority="3" />
+      <Item value="processStartInfoMock" priority="7" />
+      <Item value="IRegisterLayoutPluginCommand`0" priority="0" />
+      <Item value="registerLayoutPluginCommandMock" priority="1" />
+      <Item value="Func&lt;IProcessStartInfo&gt;" priority="0" />
+      <Item value="MockBehavior`0" priority="0" />
+      <Item value="_processStartInfoMock" priority="3" />
+      <Item value="It`0" priority="2" />
+      <Item value="_processWrapperMock" priority="0" />
+      <Item value="WorkingDirectory" priority="0" />
+      <Item value="UserName" priority="0" />
+      <Item value="TOutput`0" priority="1" />
+      <Item value="IQuery" priority="1" />
+      <Item value="IStartProcessQuery`0" priority="0" />
+      <Item value="startProcessQuery" priority="0" />
+      <Item value="Queries" priority="0" />
+      <Item value="_getStartProcessQuery" priority="1" />
+      <Item value="IProcessStartInfoWrapper`0" priority="1" />
+      <Item value="ProcessStartInfoWrapper`0" priority="4" />
+      <Item value="IGetProcessStartInfoQuery`0" priority="1" />
+      <Item value="_getProcessStartInfoQuery" priority="3" />
+      <Item value="getProcessStartInfoQuery" priority="1" />
+      <Item value="Mock&lt;IGetProcessStartInfoQuery&gt;" priority="0" />
+      <Item value="IGetStartProcessQuery`0" priority="0" />
+      <Item value="GetStartProcessQuery`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Diagnostics.Process">
+      <Item value="Start`0" priority="6" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Diagnostics.Process">
+      <Item value="StandardError" priority="3" />
+      <Item value="Start`0" priority="2" />
+      <Item value="WaitForInputIdle`0" priority="1" />
+      <Item value="StandardInput" priority="6" />
+      <Item value="StandardOutput" priority="22" />
+      <Item value="WaitForExit`0" priority="2" />
+      <Item value="Kill`0" priority="3" />
+      <Item value="BeginOutputReadLine`0" priority="2" />
+      <Item value="EnableRaisingEvents" priority="0" />
+      <Item value="OutputDataReceived" priority="2" />
+      <Item value="Container" priority="0" />
+      <Item value="StartInfo" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:GraphVizWrapper.GraphVizWrapper">
+      <Item value="GenerateGraph`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.IO.StreamWriter">
+      <Item value="Write`0" priority="2" />
+      <Item value="WriteLine`0" priority="0" />
+      <Item value="Close`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@NUnit.Framework.Assert">
+      <Item value="AreEqual`0" priority="1" />
+      <Item value="Equals`0" priority="0" />
+      <Item value="NotNull`0" priority="0" />
+      <Item value="Greater`0" priority="0" />
+      <Item value="That`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Diagnostics.ProcessStartInfo">
+      <Item value="RedirectStandardInput" priority="4" />
+      <Item value="Arguments" priority="1" />
+      <Item value="RedirectStandardOutput" priority="2" />
+      <Item value="FileName" priority="0" />
+      <Item value="RedirectStandardError" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.IO.StreamReader">
+      <Item value="ReadLine`0" priority="7" />
+      <Item value="ReadToEnd`0" priority="7" />
+      <Item value="EndOfStream" priority="0" />
+      <Item value="BaseStream" priority="1" />
+      <Item value="Read`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.IO.File">
+      <Item value="Open`0" priority="0" />
+      <Item value="Move`0" priority="1" />
+      <Item value="Exists`0" priority="2" />
+      <Item value="Delete`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.IO.FileStream">
+      <Item value="ReadByte`0" priority="2" />
+      <Item value="Length" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.String">
+      <Item value="Empty" priority="5" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.IO.Directory">
+      <Item value="GetCurrentDirectory`0" priority="1" />
+      <Item value="Exists`0" priority="0" />
+      <Item value="CreateDirectory`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@GraphVizWrapper.Enums">
+      <Item value="GraphReturnType`0" priority="5" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:GraphVizWrapper.Enums+GraphReturnType">
+      <Item value="ToString`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.String">
+      <Item value="ToLower`0" priority="0" />
+      <Item value="Contains`0" priority="0" />
+      <Item value="ToString`0" priority="0" />
+      <Item value="Remove`0" priority="3" />
+      <Item value="Substring`0" priority="0" />
+      <Item value="LastIndexOf`0" priority="0" />
+      <Item value="Replace`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@GraphVizWrapper.Enums+GraphReturnType">
+      <Item value="Png" priority="1" />
+      <Item value="Jpg" priority="0" />
+      <Item value="Pdf" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Threading.Thread">
+      <Item value="Sleep`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.IO.FileShare">
+      <Item value="ReadWrite" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Diagnostics.DataReceivedEventArgs">
+      <Item value="Data" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.IO.Stream">
+      <Item value="Read`0" priority="1" />
+      <Item value="ToString`0" priority="0" />
+      <Item value="ReadByte`0" priority="0" />
+      <Item value="Length" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.IO.Path">
+      <Item value="Combine`0" priority="0" />
+      <Item value="GetFullPath`0" priority="0" />
+      <Item value="GetDirectoryName`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Environment">
+      <Item value="CurrentDirectory" priority="1" />
+      <Item value="SystemDirectory" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Web.HttpContext">
+      <Item value="Current" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.HttpContext">
+      <Item value="Server" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.HttpServerUtility">
+      <Item value="MapPath`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@NUnit.Framework.Is">
+      <Item value="GreaterThan`0" priority="0" />
+      <Item value="TypeOf`1" priority="0" />
+      <Item value="GreaterThanOrEqualTo`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:GraphVizWrapper.Interfaces.IProcessFactory">
+      <Item value="Start`0" priority="0" />
+      <Item value="Create`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:GraphVizWrapper.Interfaces.IProcessStartInfoFactory">
+      <Item value="Create`0" priority="5" />
+      <Item value="Invoke`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:NUnit.Mocks.DynamicMock">
+      <Item value="Call`0" priority="0" />
+      <Item value="MockInstance" priority="16" />
+      <Item value="ExpectAndReturn`0" priority="12" />
+      <Item value="Expect`0" priority="1" />
+      <Item value="SetReturnValue`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:GraphVizWrapper.Factories.ProcessStartInfoFactory">
+      <Item value="Create`0" priority="3" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:GraphVizWrapper.ProcessWrapper">
+      <Item value="Start`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Reflection.Assembly">
+      <Item value="GetAssembly`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Reflection.Assembly">
+      <Item value="CodeBase" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Uri">
+      <Item value="UnescapeDataString`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.UriBuilder">
+      <Item value="Path" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:GraphVizWrapper.Interfaces.IProcessStartInfo">
+      <Item value="Invoke`0" priority="5" />
+      <Item value="RedirectStandardError" priority="4" />
+      <Item value="RedirectStandardOutput" priority="4" />
+      <Item value="UseShellExecute" priority="1" />
+      <Item value="FileName" priority="3" />
+      <Item value="RedirectStandardInput" priority="3" />
+      <Item value="CreateNoWindow" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Object">
+      <Item value="Equals`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:GraphVizWrapper.ProcessStartInfo">
+      <Item value="Invoke`0" priority="4" />
+      <Item value="RedirectStandardInput" priority="0" />
+      <Item value="RedirectStandardOutput" priority="0" />
+      <Item value="RedirectStandardError" priority="0" />
+      <Item value="FileName" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:GraphVizWrapper.Interfaces.IRegisterLayoutPluginCommand">
+      <Item value="Invoke`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Moq.Mock`1">
+      <Item value="Setup`1" priority="4" />
+      <Item value="FluentMock`2" priority="1" />
+      <Item value="Object" priority="21" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:GraphVizWrapper.Interfaces.IProcessWrapper">
+      <Item value="Start`0" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Moq.Language.Flow.ISetup`2">
+      <Item value="Returns`16" priority="5" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Moq.MockBehavior">
+      <Item value="Strict" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Moq.It">
+      <Item value="IsAny`1" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:GraphVizWrapper.Interfaces.IProcessQuery">
+      <Item value="Invoke`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:GraphVizWrapper.Interfaces.IGetStartProcessQuery">
+      <Item value="Invoke`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:GraphVizWrapper.Interfaces.IGetProcessStartInfoQuery">
+      <Item value="Invoke`0" priority="3" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+</Configuration>
