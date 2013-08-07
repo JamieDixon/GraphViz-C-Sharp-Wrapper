@@ -1,11 +1,12 @@
 ﻿using System.Diagnostics;
-using GraphVizWrapper.Interfaces;
 using GraphVizWrapper.Queries;
 using Moq;
 using NUnit.Framework;
 
 namespace GraphVizWrapper.Tests
 {
+    using GraphVizWrapper.Commands;
+
     [TestFixture]
     public class Tests
     {
@@ -37,7 +38,7 @@ namespace GraphVizWrapper.Tests
                         CreateNoWindow = true
                     });
 
-            var wrapper = new GraphVizWrapper(
+            var wrapper = new GraphGeneration(
                 _getStartProcessQuery,
                 _getProcessStartInfoQuery.Object,
                 _registerLayoutPluginCommandMock.Object);

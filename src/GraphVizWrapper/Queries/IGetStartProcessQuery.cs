@@ -1,5 +1,5 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="Queries.cs" company="Jamie Dixon Ltd">
+// <copyright file="IGetStartProcessQuery.cs" company="Jamie Dixon Ltd">
 //   Jamie Dixon
 // </copyright>
 // <summary>
@@ -7,10 +7,11 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace GraphVizWrapper.Interfaces
+namespace GraphVizWrapper.Queries
 {
     using System.Diagnostics;
 
-    
-    public interface IGetProcessStartInfoQuery : IQuery<IProcessStartInfoWrapper, ProcessStartInfo> { }
+    public interface IGetStartProcessQuery : IQuery<ProcessStartInfo, Process>
+    {
+    }
 }

@@ -18,9 +18,9 @@ var getStartProcessQuery = new GetStartProcessQuery();
 var getProcessStartInfoQuery = new GetProcessStartInfoQuery();
 var registerLayoutPluginCommand = new RegisterLayoutPluginCommand();
 
-// GraphVizWrapper can be injected via the IGraphVizWrapper interface
+// GraphGeneration can be injected via the IGraphGeneration interface
 
-var wrapper = new GraphVizWrapper(getStartProcessQuery, 
+var wrapper = new GraphGeneration(getStartProcessQuery, 
 								  getProcessStartInfoQuery, 
 								  registerLayoutPluginCommand);
 

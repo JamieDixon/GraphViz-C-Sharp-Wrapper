@@ -1,4 +1,11 @@
-﻿using GraphVizWrapper.Interfaces;
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="GetProcessStartInfoQuery.cs" company="Jamie Dixon Ltd">
+//   Jamie Dixon
+// </copyright>
+// <summary>
+//   Defines the GetProcessStartInfoQuery type.
+// </summary>
+// --------------------------------------------------------------------------------------------------------------------
 
 namespace GraphVizWrapper.Queries
 {

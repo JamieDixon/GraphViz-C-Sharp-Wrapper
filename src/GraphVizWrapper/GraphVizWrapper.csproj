@@ -42,24 +42,18 @@
   <ItemGroup>
     <Compile Include="ProcessStartInfoWrapper.cs" />
     <Compile Include="Enums.cs" />
-    <Compile Include="Interfaces\Commands.cs" />
-    <Compile Include="Interfaces\ICommand.cs" />
-    <Compile Include="Interfaces\IProcessStartInfoWrapper.cs" />
-    <Compile Include="Interfaces\IQuery.cs" />
-    <Compile Include="Interfaces\Queries.cs" />
+    <Compile Include="Commands\IRegisterLayoutPluginCommand.cs" />
+    <Compile Include="Commands\ICommand.cs" />
+    <Compile Include="IProcessStartInfoWrapper.cs" />
+    <Compile Include="Queries\IQuery.cs" />
     <Compile Include="Queries\GetStartProcessQuery.cs" />
     <Compile Include="Queries\GetProcessStartInfoQuery.cs" />
-    <Compile Include="GraphVizWrapper.cs" />
-    <Compile Include="Interfaces\IFactory.cs" />
-    <Compile Include="Interfaces\IGraphVizWrapper.cs" />
+    <Compile Include="GraphGeneration.cs" />
+    <Compile Include="IGraphGeneration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Commands\RegisterLayoutPluginCommand.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Service References\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Licences\GraphVizLicence.txt" />
+    <Compile Include="Queries\IGetProcessStartInfoQuery.cs" />
+    <Compile Include="Queries\IGetStartProcessQuery.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

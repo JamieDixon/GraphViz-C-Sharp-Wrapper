@@ -1,16 +1,16 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="Queries.cs" company="Jamie Dixon Ltd">
+// <copyright file="IRegisterLayoutPluginCommand.cs" company="Jamie Dixon Ltd">
 //   Jamie Dixon
 // </copyright>
 // <summary>
-//   Defines the GraphVizWrapper type.
+//   Defines the IRegisterLayoutPluginCommand type.
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace GraphVizWrapper.Interfaces
+namespace GraphVizWrapper.Commands
 {
-    using System.Diagnostics;
-
-    
-    public interface IGetProcessStartInfoQuery : IQuery<IProcessStartInfoWrapper, ProcessStartInfo> { }
+    public interface IRegisterLayoutPluginCommand : ICommand
+    {
+        
+    }
 }

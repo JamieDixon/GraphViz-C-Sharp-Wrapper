@@ -1,7 +1,16 @@
-﻿using GraphVizWrapper.Interfaces;
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="RegisterLayoutPluginCommand.cs" company="Jamie Dixon Ltd">
+//   Jamie Dixon
+// </copyright>
+// <summary>
+//   Defines the RegisterLayoutPluginCommand type.
+// </summary>
+// --------------------------------------------------------------------------------------------------------------------
 
 namespace GraphVizWrapper.Commands
 {
+    using GraphVizWrapper.Queries;
+    
     public class RegisterLayoutPluginCommand : IRegisterLayoutPluginCommand
     {
         private readonly IGetProcessStartInfoQuery _getProcessStartInfoQuery;

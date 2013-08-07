@@ -1,4 +1,13 @@
-﻿namespace GraphVizWrapper
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="Enums.cs" company="Jamie Dixon Ltd">
+//   Jamie Dixon
+// </copyright>
+// <summary>
+//   Defines the static Enums type.
+// </summary>
+// --------------------------------------------------------------------------------------------------------------------
+
+namespace GraphVizWrapper
 {
     public static class Enums
     {
