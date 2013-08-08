@@ -47,3 +47,13 @@ Once you've run the build you're ready to move the necessary files to your own p
 You'll need the GraphVizWrapper.dll file from the bin folder along with the GraphViz folder 
 (the dll and this folder must reside at the same level and be placed into the bin of your application at build time)
 
+## Running the sample application
+
+1. Make sure you've run build.bat
+2. Navigate to sample-applications/MVC4
+3. Open the GraphVizWrapper-MVC4Sample.sln in Visual Studio. F5 to run the project.
+
+The sample takes a binary dependency on GraphVizWrapper.dll which is placed into the lib folder when you run build.bat
+
+If you make modifications to the GraphVizWrapper you'll need to run build.bat again to make sure this sample application
+has the latest version of GraphVizWrapper.dll
