@@ -57,3 +57,20 @@ The sample takes a binary dependency on GraphVizWrapper.dll which is placed into
 
 If you make modifications to the GraphVizWrapper you'll need to run build.bat again to make sure this sample application
 has the latest version of GraphVizWrapper.dll
+
+**This sample application demonstrated one way of displaying the returned graph byte array to a user in an MVC4 application:**
+
+### Controller Action Method:
+```C#
+var bytes = this.graphVizWrapper.GenerateGraph("digraph{a -> b; b -> c; c -> a;}", Enums.GraphReturnType.Jpg);
+            
+// Alternatively you could save the image on the server as a file.
+var viewModel = string.Format("data:image/jpg;base64,{0}", Convert.ToBase64String(bytes));
+ViewBag.Data = viewModel;
+return this.View();
+```
+
+### Razor View
+```Razor
+<img src="@ViewBag.Data" />
+```
