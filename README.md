@@ -26,6 +26,24 @@ var wrapper = new GraphGeneration(getStartProcessQuery,
 
 byte[] output = wrapper.GenerateGraph("digraph{a -> b; b -> c; c -> a;}", Enums.GraphReturnType.Png);
 ```
-## Build
+## Getting started
 
-To build on the command line run **/build/build.bat**
+### Clone the repository
+```C#
+git clone https://github.com/JamieDixon/GraphViz-C-Sharp-Wrapper.git
+```
+### In the terminal (command prompt), change directory to the build folder and run the build.bat file
+```C#
+cd build
+build.bat
+```
+
+This will build the GraphVizWrapper project, configure the necessary GraphViz files 
+and move them into the GraphvizWrapper bin folder and then build/configure the sample project(s) included.
+
+### Copy files to your own project
+
+Once you've run the build you're ready to move the necessary files to your own project.
+You'll need the GraphVizWrapper.dll file from the bin folder along with the GraphViz folder 
+(the dll and this folder must reside at the same level and be placed into the bin of your application at build time)
+
