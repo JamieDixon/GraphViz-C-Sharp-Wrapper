@@ -10,7 +10,7 @@ echo Building Solution
 echo ########################################
 echo .
 
-MSBuild ../src/GraphVizWrapper.sln /property:Configuration=Release
+MSBuild build.proj /property:Configuration=Release
 
 if %ERRORLEVEL% neq 0 (
     type fail.txt

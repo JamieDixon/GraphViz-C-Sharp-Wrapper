@@ -45,9 +45,20 @@ namespace GraphVizWrapper
             set { this.renderingEngine = value; }
         }
 
+        private static string ConfigLocation
+        {
+            get
+            {
+                return AssemblyDirectory + "/" + ProcessFolder + "/" + ConfigFile;
+            }
+        }
+
         private static bool ConfigExists
         {
-            get { return File.Exists(AssemblyDirectory + "/" + ProcessFolder + "/" + ConfigFile); }
+            get
+            {
+                return File.Exists(ConfigLocation);
+            }
         }
 
         private static string AssemblyDirectory
@@ -85,7 +96,7 @@ namespace GraphVizWrapper
 
             if (!ConfigExists)
             {
-                this.registerLayoutPlugincommand.Invoke();
+                this.registerLayoutPlugincommand.Invoke(FilePath, this.RenderingEngine);
             }
 
             string fileType = this.GetReturnType(returnType);

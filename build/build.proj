@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0"
+         DefaultTargets="Build"
+         xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+		 <Import Project="lib\msbuild.community.tasks\MSBuild.Community.Tasks.Targets" />
+
+    	 <ItemGroup>
+        	<SolutionFiles Include="..\src\**\*.sln"/>
+            <SampleProjectSolutionFiles Include="..\sample-applications\**\*.sln"/>
+            <GraphVizAssemblies Include="..\src\GraphVizWrapper\bin\Release\*" />
+            <GraphViz Include="..\src\GraphVizWrapper\bin\Release\GraphViz\*" />
+    	 </ItemGroup>
+
+         <Target Name="Build">
+         	<MSBuild Projects="@(SolutionFiles)" Properties="Configuration=Release" />
+         	<unzip ZipFileName="..\src\GraphViz.zip" TargetDirectory="..\src\GraphVizWrapper\bin\Release" />
+            
+            <Copy SourceFiles="@(GraphVizAssemblies)" DestinationFolder="..\sample-applications\MVC4\lib\GraphVizWrapper" />
+            <MSBuild Projects="@(SampleProjectSolutionFiles)" Properties="Configuration=Release" />
+
+            <Copy SourceFiles="@(GraphViz)" DestinationFolder="..\sample-applications\MVC4\GraphVizWrapper-MVC4Sample\bin\GraphViz" />
+         </Target>
+ </Project>

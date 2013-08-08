@@ -22,16 +22,22 @@ namespace GraphVizWrapper.Commands
             _getProcessStartInfoQuery = getProcessStartInfoQuery;
         }
 
-        public void Invoke()
+        public void Invoke(string configFilePath, Enums.RenderingEngine renderingEngine)
         {
             var processStartInfo = _getProcessStartInfoQuery.Invoke(new ProcessStartInfoWrapper
                                                  {
+                                                     FileName = configFilePath,
                                                      UseShellExecute = false,
                                                      Arguments = "-c",
                                                      CreateNoWindow = false
                                                  });
 
             using (_getStartProcessQuery.Invoke(processStartInfo)) { }
+        }
+
+        public void Invoke()
+        {
+            throw new System.NotImplementedException();
         }
     }
 }

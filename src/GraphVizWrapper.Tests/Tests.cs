@@ -26,7 +26,7 @@ namespace GraphVizWrapper.Tests
         public void GenerateGraphReturnsByteArrayWithLengthGreaterOrEqualZero()
         {
             // Arrange
-            _registerLayoutPluginCommandMock.Setup(m => m.Invoke());
+            _registerLayoutPluginCommandMock.Setup(m => m.Invoke("SomeLocation", Enums.RenderingEngine.Dot));
             _getProcessStartInfoQuery.Setup(m => m.Invoke(It.IsAny<IProcessStartInfoWrapper>())).Returns(
                 new ProcessStartInfo
                     {

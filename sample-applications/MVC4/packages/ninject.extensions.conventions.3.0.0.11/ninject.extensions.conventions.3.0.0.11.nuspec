@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>ninject.extensions.conventions</id>
+    <version>3.0.0.11</version>
+    <authors>Ninject Project Contributors</authors>
+    <owners>Ninject Project Contributors</owners>
+    <licenseUrl>https://github.com/ninject/ninject.extensions.conventions/raw/master/LICENSE.txt</licenseUrl>
+    <projectUrl>http://www.ninject.org/</projectUrl>
+    <iconUrl>https://github.com/ninject/ninject/raw/master/logos/Ninject-Logo32.png</iconUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>Extension for convention based binding for Ninject</description>
+    <tags>Ninject ioc di</tags>
+    <dependencies>
+      <dependency id="Ninject" version="[3.0.0.0, 3.1.0.0)" />
+    </dependencies>
+  </metadata>
+</package>

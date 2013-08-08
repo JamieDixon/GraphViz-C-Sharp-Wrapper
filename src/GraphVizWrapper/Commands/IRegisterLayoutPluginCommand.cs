@@ -11,6 +11,6 @@ namespace GraphVizWrapper.Commands
 {
     public interface IRegisterLayoutPluginCommand : ICommand
     {
-        
+        void Invoke(string conigFilePath, Enums.RenderingEngine renderingEngine); 
     }
 }
