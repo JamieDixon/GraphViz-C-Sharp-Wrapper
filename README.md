@@ -16,7 +16,7 @@ This library acts as a wrapper for the GraphViz command line tools. The graphviz
 
 var getStartProcessQuery = new GetStartProcessQuery();
 var getProcessStartInfoQuery = new GetProcessStartInfoQuery();
-var registerLayoutPluginCommand = new RegisterLayoutPluginCommand();
+var registerLayoutPluginCommand = new RegisterLayoutPluginCommand(getProcessStartInfoQuery, getStartProcessQuery);
 
 // GraphGeneration can be injected via the IGraphGeneration interface
 
