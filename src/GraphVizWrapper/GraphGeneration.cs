@@ -105,6 +105,7 @@ namespace GraphVizWrapper
 
             using (var process = this.startProcessQuery.Invoke(processStartInfo))
             {
+                process.BeginErrorReadLine();
                 using (var stdIn = process.StandardInput)
                 {
                     stdIn.WriteLine(dotFile);
