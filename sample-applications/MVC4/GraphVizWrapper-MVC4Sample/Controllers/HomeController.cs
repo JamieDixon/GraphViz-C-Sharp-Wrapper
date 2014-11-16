@@ -6,6 +6,9 @@
 //   TODO: Summary
 // </summary>
 //---------------------------------------------------------------------------------------------------------------------
+
+using System.Text;
+
 namespace GraphVizWrapper_MVC4Sample.Controllers
 {
     using System;
@@ -46,6 +49,18 @@ namespace GraphVizWrapper_MVC4Sample.Controllers
             
             // Alternatively you could save the image on the server as a file.
             var viewModel = string.Format("data:image/jpg;base64,{0}", Convert.ToBase64String(bytes));
+            ViewBag.Data = viewModel;
+            return this.View();
+        }
+
+        /// <summary>
+        /// Example of graph representation in SVG format
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult Svg()
+        {
+            var bytes = this.graphVizWrapper.GenerateGraph("digraph{s -> v; v -> g; g -> s; g -> f; f -> o; o -> r; r -> m; m -> a; a -> t; t -> f;}", Enums.GraphReturnType.Svg);
+            var viewModel = Encoding.UTF8.GetString(bytes);
             ViewBag.Data = viewModel;
             return this.View();
         }
