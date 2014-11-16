@@ -15,7 +15,8 @@ namespace GraphVizWrapper
         {
             Pdf,
             Jpg,
-            Png
+            Png,
+            Svg
         }
 
         public enum RenderingEngine
