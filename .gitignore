@@ -4,3 +4,7 @@ _ReSharper.GraphVizWrapper/
 Thumbs.db
 *.StyleCop
 *.Cache
+TestResult.xml
+*.VisualState.xml
+*.nunit
+*.suo

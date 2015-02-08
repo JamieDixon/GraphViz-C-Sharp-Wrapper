@@ -152,7 +152,9 @@ namespace GraphVizWrapper
                                  {
                                      { Enums.GraphReturnType.Png, "png" },
                                      { Enums.GraphReturnType.Jpg, "jpg" },
-                                     { Enums.GraphReturnType.Pdf, "pdf" }
+                                     { Enums.GraphReturnType.Pdf, "pdf" },
+                                     { Enums.GraphReturnType.Plain, "plain" },
+                                     { Enums.GraphReturnType.PlainExt, "plain-ext" }
                                  };
             return nameValues[returnType];
         }

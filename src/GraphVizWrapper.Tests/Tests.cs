@@ -69,5 +69,44 @@ namespace GraphVizWrapper.Tests
 
             byte[] output = wrapper.GenerateGraph(diagraph, Enums.GraphReturnType.Png);
         }
+
+        [Test]
+        public void AllowsPlainTextOutputType() {
+            // Arrange
+            var getProcessStartInfoQuerty = new GetProcessStartInfoQuery();
+            var registerLayoutPluginCommand = new RegisterLayoutPluginCommand(getProcessStartInfoQuerty, _getStartProcessQuery);
+
+            var wrapper = new GraphGeneration(
+                _getStartProcessQuery,
+                getProcessStartInfoQuerty,
+                registerLayoutPluginCommand);
+
+            // Act
+            byte[] output = wrapper.GenerateGraph("digraph{a -> b; b -> c; c -> a;}", Enums.GraphReturnType.Plain);
+
+            var graphPortion = System.Text.Encoding.Default.GetString(output).Split(new string[] { "\r\n" }, System.StringSplitOptions.None);
+
+            Assert.AreEqual("graph 1 1.125 2.5", graphPortion[0]);
+        }
+
+        [Test]
+        public void AllowsPlainExtTextOutputType()
+        {
+            // Arrange
+            var getProcessStartInfoQuerty = new GetProcessStartInfoQuery();
+            var registerLayoutPluginCommand = new RegisterLayoutPluginCommand(getProcessStartInfoQuerty, _getStartProcessQuery);
+
+            var wrapper = new GraphGeneration(
+                _getStartProcessQuery,
+                getProcessStartInfoQuerty,
+                registerLayoutPluginCommand);
+
+            // Act
+            byte[] output = wrapper.GenerateGraph("digraph{a -> b; b -> c; c -> a;}", Enums.GraphReturnType.PlainExt);
+
+            var graphPortion = System.Text.Encoding.Default.GetString(output).Split(new string[] { "\r\n" }, System.StringSplitOptions.None);
+
+            Assert.AreEqual("graph 1 1.125 2.5", graphPortion[0]);
+        }
     }
 }
