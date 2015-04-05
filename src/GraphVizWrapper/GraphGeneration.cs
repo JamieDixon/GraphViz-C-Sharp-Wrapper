@@ -153,12 +153,10 @@ namespace GraphVizWrapper
                                      { Enums.GraphReturnType.Png, "png" },
                                      { Enums.GraphReturnType.Jpg, "jpg" },
                                      { Enums.GraphReturnType.Pdf, "pdf" },
-<<<<<<< HEAD
                                      { Enums.GraphReturnType.Plain, "plain" },
-                                     { Enums.GraphReturnType.PlainExt, "plain-ext" }
-=======
+                                     { Enums.GraphReturnType.PlainExt, "plain-ext" },
                                      { Enums.GraphReturnType.Svg, "svg" }
->>>>>>> 41e86e4fab18dd87be9765e701865dc5d5ebe6c9
+
                                  };
             return nameValues[returnType];
         }

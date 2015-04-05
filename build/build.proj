@@ -14,11 +14,18 @@
 
          <Target Name="Build">
          	<MSBuild Projects="@(SolutionFiles)" Properties="Configuration=Release" />
+            <!-- Extract graphviz exes to GraphVizWrapper bin/Release then copy to Debug folder -->
          	<unzip ZipFileName="..\src\GraphViz.zip" TargetDirectory="..\src\GraphVizWrapper\bin\Release" />
-            
-            <Copy SourceFiles="@(GraphVizAssemblies)" DestinationFolder="..\sample-applications\MVC4\lib\GraphVizWrapper" />
-            <MSBuild Projects="@(SampleProjectSolutionFiles)" Properties="Configuration=Release" />
+            <unzip ZipFileName="..\src\GraphViz.zip" TargetDirectory="..\src\GraphVizWrapper\bin\Debug" />
+            <unzip ZipFileName="..\src\GraphViz.zip" TargetDirectory="..\sample-applications\MVC4\GraphVizWrapper-MVC4Sample\bin" />
 
-            <Copy SourceFiles="@(GraphViz)" DestinationFolder="..\sample-applications\MVC4\GraphVizWrapper-MVC4Sample\bin\GraphViz" />
+            <Copy SourceFiles="@(GraphVizAssemblies)" DestinationFolder="..\sample-applications\MVC4\lib\GraphVizWrapper" />
+            
+            <!-- <Copy SourceFiles="@(GraphViz)" DestinationFolder="..\sample-applications\MVC4\GraphVizWrapper-MVC4Sample\bin\GraphViz" />  -->
+
+                        
+            <!-- <MSBuild Projects="@(SampleProjectSolutionFiles)" Properties="Configuration=Release" /> -->
+            
+            <!-- <Copy SourceFiles="@(GraphViz)" DestinationFolder="..\sample-applications\MVC4\GraphVizWrapper-MVC4Sample\bin\GraphViz" /> -->
          </Target>
  </Project>
