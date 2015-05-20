@@ -29,6 +29,7 @@ namespace GraphVizWrapper
         private readonly IGetProcessStartInfoQuery getProcessStartInfoQuery;
         private readonly IRegisterLayoutPluginCommand registerLayoutPlugincommand;
         private Enums.RenderingEngine renderingEngine;
+        private String graphvizPath = null;
 
         public GraphGeneration(IGetStartProcessQuery startProcessQuery, IGetProcessStartInfoQuery getProcessStartInfoQuery, IRegisterLayoutPluginCommand registerLayoutPlugincommand)
         {
@@ -38,6 +39,23 @@ namespace GraphVizWrapper
         }
 
         #region Properties
+
+        public String GraphvizPath
+        {
+            get { return graphvizPath ?? AssemblyDirectory + "/" + ProcessFolder; }
+            set
+            {
+                if (value != null && value.Trim().Length > 0)
+                {
+                    String path = value.Replace("\\", "/");
+                    graphvizPath = path.EndsWith("/") ? path.Substring(0, path.LastIndexOf('/')) : path;
+                }
+                else
+                {
+                    graphvizPath = null;
+                }
+            }
+        }
         
         public Enums.RenderingEngine RenderingEngine
         {
@@ -45,22 +63,22 @@ namespace GraphVizWrapper
             set { this.renderingEngine = value; }
         }
 
-        private static string ConfigLocation
+        private string ConfigLocation
         {
             get
             {
-                return AssemblyDirectory + "/" + ProcessFolder + "/" + ConfigFile;
+                return GraphvizPath + "/" + ConfigFile;
             }
         }
 
-        private static bool ConfigExists
+        private bool ConfigExists
         {
             get
             {
                 return File.Exists(ConfigLocation);
             }
         }
-
+        
         private static string AssemblyDirectory
         {
             get
@@ -73,7 +91,7 @@ namespace GraphVizWrapper
 
         private string FilePath
         {
-            get { return AssemblyDirectory + "/" + ProcessFolder + "/" + this.GetRenderingEngine(this.renderingEngine) + ".exe"; }
+            get { return  GraphvizPath + "/" + this.GetRenderingEngine(this.renderingEngine) + ".exe"; }
         }
 
         #endregion
@@ -110,7 +128,6 @@ namespace GraphVizWrapper
                 {
                     stdIn.WriteLine(dotFile);
                 }
-
                 using (var stdOut = process.StandardOutput)
                 {
                     var baseStream = stdOut.BaseStream;
