@@ -25,7 +25,14 @@ namespace GraphVizWrapper
         {
             Dot, // First item in enum is default rendering engine (E[0])
             Neato,
-            Fdp
+            Twopi,
+            Circo,
+            Fdp,
+            Sfdp,
+            Patchwork,
+            Osage 
+
+
         }
     }
 }

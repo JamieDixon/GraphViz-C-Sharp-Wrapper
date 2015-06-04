@@ -166,8 +166,13 @@ namespace GraphVizWrapper
             var nameValues = new Dictionary<Enums.RenderingEngine, string>
                                  {
                                      { Enums.RenderingEngine.Dot, "dot" },
+                                     { Enums.RenderingEngine.Neato, "neato" },
+                                     { Enums.RenderingEngine.Twopi, "twopi" },
+                                     { Enums.RenderingEngine.Circo, "circo" },
                                      { Enums.RenderingEngine.Fdp, "fdp" },
-                                     { Enums.RenderingEngine.Neato, "neato" }
+                                     { Enums.RenderingEngine.Sfdp, "sfdp" },
+                                     { Enums.RenderingEngine.Patchwork, "patchwork" },
+                                     { Enums.RenderingEngine.Osage, "osage" }
                                  };
             return nameValues[renderingType];
         }
