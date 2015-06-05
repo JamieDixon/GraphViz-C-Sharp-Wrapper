@@ -7,6 +7,8 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
+using System.IO;
+
 namespace GraphVizWrapper.Queries
 {
     public class GetProcessStartInfoQuery : IGetProcessStartInfoQuery
@@ -15,7 +17,8 @@ namespace GraphVizWrapper.Queries
         {
             return new System.Diagnostics.ProcessStartInfo
                        {
-                           FileName = startInfoWrapper.FileName,
+                           WorkingDirectory = Path.GetDirectoryName(startInfoWrapper.FileName) ?? "",
+                           FileName = '"' + startInfoWrapper.FileName + '"',
                            Arguments = startInfoWrapper.Arguments,
                            RedirectStandardInput = startInfoWrapper.RedirectStandardInput,
                            RedirectStandardOutput = startInfoWrapper.RedirectStandardOutput,
