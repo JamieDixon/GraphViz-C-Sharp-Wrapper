@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>GraphViz.NET</id>
+    <version>1.0.0</version>
+    <authors>Jamie Dixon</authors>
+    <owners>Jamie Dixon</owners>
+    <licenseUrl>https://github.com/JamieDixon/GraphViz-C-Sharp-Wrapper</licenseUrl>
+    <projectUrl>https://github.com/JamieDixon/GraphViz-C-Sharp-Wrapper</projectUrl>
+    <iconUrl>https://cloud.githubusercontent.com/assets/1519443/8213182/0afa9bb4-1518-11e5-9d8b-8a3a9a0cecfa.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <summary>
+        GraphViz.NET - Use GraphViz in your .NET applications
+    </summary>
+    <description>
+        This is a C# wrapper for the GraphViz graph generator.
+        Pass in a dot string and an output type and voila, your graph is generated.
+        The output file is returned to you as a byte array to do as you please.
+        This library acts as a wrapper for the GraphViz command line tools.
+
+        Once installed, a new element will be added to your web.config or app.config with the key "graphVizLocation". Use this to specify to folder containing your installation of graphviz.
+    </description>
+    <releaseNotes></releaseNotes>
+    <copyright>Copyright 2015</copyright>
+    <tags>GraphViz GraphVizCSharp GraphVizDotNet DotNet CSharp</tags>
+    <dependencies>
+    </dependencies>
+  </metadata>
+
+  <files>
+        <file src="bin\GraphVizWrapper.dll" target="lib\net40" />
+        <file src="Content\app.config.install.xdt" target="Content" />
+        <file src="Content\web.config.install.xdt" target="Content" />
+        <file src="readme.txt" target="" />
+    </files>
+
+</package>
