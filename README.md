@@ -1,3 +1,6 @@
+# nuget
+`PM> Install-Package GraphViz.NET`
+
 # Project Description
 This is a C# wrapper for the GraphViz graph generator.
 
