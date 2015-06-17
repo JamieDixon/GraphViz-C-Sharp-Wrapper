@@ -47,8 +47,16 @@ and move them into the GraphvizWrapper bin folder and then build/configure the s
 ### Copy files to your own project
 
 Once you've run the build you're ready to move the necessary files to your own project.
-You'll need the GraphVizWrapper.dll file from the bin folder along with the GraphViz folder 
-(the dll and this folder must reside at the same level and be placed into the bin of your application at build time)
+You'll need the GraphVizWrapper.dll file from the bin folder ~~along with the GraphViz folder 
+(the dll and this folder must reside at the same level and be placed into the bin of your application at build time)~~
+
+You must specify the location of your GraphViz folder inside either your app.config or web.config using the graphVizLocation key
+
+```
+<appSettings>
+    <add key="graphVizLocation" value="C:\GraphViz" />
+  </appSettings>
+```
 
 ## Running the sample application
 
