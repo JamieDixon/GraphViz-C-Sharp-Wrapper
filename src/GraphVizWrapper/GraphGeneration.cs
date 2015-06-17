@@ -11,11 +11,12 @@ namespace GraphVizWrapper
 {
     using System;
     using System.Collections.Generic;
+    using System.Configuration;
     using System.IO;
     using System.Reflection;
-
-    using GraphVizWrapper.Commands;
-    using GraphVizWrapper.Queries;
+    
+    using Commands;
+    using Queries;
 
     /// <summary>
     /// The main entry class for the wrapper.
@@ -36,6 +37,8 @@ namespace GraphVizWrapper
             this.startProcessQuery = startProcessQuery;
             this.getProcessStartInfoQuery = getProcessStartInfoQuery;
             this.registerLayoutPlugincommand = registerLayoutPlugincommand;
+
+            this.graphvizPath = ConfigurationManager.AppSettings["graphVizLocation"];
         }
 
         #region Properties
@@ -110,6 +113,7 @@ namespace GraphVizWrapper
         /// </returns>
         public byte[] GenerateGraph(string dotFile, Enums.GraphReturnType returnType)
         {
+
             byte[] output;
 
             if (!ConfigExists)
