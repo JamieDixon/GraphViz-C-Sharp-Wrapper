@@ -8,11 +8,15 @@ Pass in a dot string and an output type and voila, your graph is generated.
 
 The output file is returned to you as a byte array to do as you please.
 
-This library acts as a wrapper for the GraphViz command line tools. The graphviz command line tools are included in this project and need to be placed in the graphviz folder relative to the GraphVizWrapper dll upon deployment.
+This library acts as a wrapper for the GraphViz command line tools. The graphviz command line tools may be downloaded from graphviz.org/Download.php, and need to be placed in the 'graphviz' folder relative to the GraphVizWrapper dll upon deployment.
 
 ## Usage
 
 ```C#
+using GraphVizWrapper;
+using GraphVizWrapper.Commands;
+using GraphVizWrapper.Queries;
+
 // These three instances can be injected via the IGetStartProcessQuery, 
 //                                               IGetProcessStartInfoQuery and 
 //                                               IRegisterLayoutPluginCommand interfaces
@@ -31,12 +35,24 @@ byte[] output = wrapper.GenerateGraph("digraph{a -> b; b -> c; c -> a;}", Enums.
 ```
 ## Getting started
 
+### Install GraphViz
+If you haven't already, download and install GraphViz from graphviz.org/Download.php. Make sure the 'graphVizLocation' key in
+each of the following files points to the 'bin' folder of your installation:
+> /src/GraphVizWrapper/App.config
+> /src/GraphVizWrapper.Tests/App.config
+> /sample-applications\MVC4\GraphVizWrapper-MVC4Sample/Web.config
+
 ### Clone the repository
-```C#
+```PowerShell
 git clone https://github.com/JamieDixon/GraphViz-C-Sharp-Wrapper.git
 ```
+
+### Add MSBuild to PATH
+If you haven't used this before, you need to add the .Net4 framework to your PATH environment variable. Instructions on how to
+do so may be found [here](http://stackoverflow.com/a/12608705/2388930).
+
 ### In the terminal (command prompt), change directory to the build folder and run the build.bat file
-```C#
+```Batchfile
 cd build
 build.bat
 ```
@@ -50,12 +66,13 @@ Once you've run the build you're ready to move the necessary files to your own p
 You'll need the GraphVizWrapper.dll file from the bin folder ~~along with the GraphViz folder 
 (the dll and this folder must reside at the same level and be placed into the bin of your application at build time)~~
 
-You must specify the location of your GraphViz folder inside either your app.config or web.config using the graphVizLocation key
+You must either include the GraphViz folder (containing the files from the /bin folder of your installation), or specify the
+location of this folder inside either your app.config or web.config using the graphVizLocation key:
 
 ```
 <appSettings>
-    <add key="graphVizLocation" value="C:\GraphViz" />
-  </appSettings>
+    <add key="graphVizLocation" value="C:\Program Files (x86)\Graphviz2.38\bin" />
+</appSettings>
 ```
 
 ## Running the sample application
@@ -73,6 +90,10 @@ has the latest version of GraphVizWrapper.dll
 
 ### Controller Action Method:
 ```C#
+using GraphVizWrapper;
+using GraphVizWrapper.Commands;
+using GraphVizWrapper.Queries;
+
 var bytes = this.graphVizWrapper.GenerateGraph("digraph{a -> b; b -> c; c -> a;}", Enums.GraphReturnType.Jpg);
             
 // Alternatively you could save the image on the server as a file.
