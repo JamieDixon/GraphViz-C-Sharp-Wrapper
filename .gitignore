@@ -1,6 +1,7 @@
 bin/
 obj/
 _ReSharper.GraphVizWrapper/
+.vs/
 Thumbs.db
 *.StyleCop
 *.Cache
