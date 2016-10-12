@@ -6,13 +6,13 @@ using Xunit;
 
 namespace GraphVizWrapper.Tests
 {
-    using GraphVizWrapper.Commands;
+    using Commands;
 
     public class Tests
     {
-        private Mock<IRegisterLayoutPluginCommand> _registerLayoutPluginCommandMock;
-        private Mock<IGetProcessStartInfoQuery> _getProcessStartInfoQuery;
-        private IGetStartProcessQuery _getStartProcessQuery;
+        private readonly Mock<IRegisterLayoutPluginCommand> _registerLayoutPluginCommandMock;
+        private readonly Mock<IGetProcessStartInfoQuery> _getProcessStartInfoQuery;
+        private readonly IGetStartProcessQuery _getStartProcessQuery;
         
         public Tests()
         {
@@ -46,7 +46,7 @@ namespace GraphVizWrapper.Tests
             byte[] output = wrapper.GenerateGraph("digraph{a -> b; b -> c; c -> a;}", Enums.GraphReturnType.Png);
 
             // Assert
-            //Assert.That(output.Length, Is.GreaterThanOrEqualTo(0));
+            Assert.True(output.Length >= 0);
         }
 
         [Fact]
@@ -85,9 +85,9 @@ namespace GraphVizWrapper.Tests
 
             File.WriteAllBytes("C:\\Temp\\output.dat", output);
 
-            var graphPortion = System.Text.Encoding.UTF8.GetString(output).Split(new string[] { "\r\n" }, System.StringSplitOptions.None);
+            var graphPortion = System.Text.Encoding.UTF8.GetString(output).Split(new [] { "\r\n" }, System.StringSplitOptions.None);
 
-            //Assert.AreEqual("graph 1 1.125 2.5", graphPortion[0]);
+            Assert.Equal("graph 1 1.125 2.5", graphPortion[0]);
         }
 
         [Fact]
@@ -105,9 +105,9 @@ namespace GraphVizWrapper.Tests
             // Act
             byte[] output = wrapper.GenerateGraph("digraph{a -> b; b -> c; c -> a;}", Enums.GraphReturnType.PlainExt);
 
-            var graphPortion = System.Text.Encoding.UTF8.GetString(output).Split(new string[] { "\r\n" }, System.StringSplitOptions.None);
+            var graphPortion = System.Text.Encoding.UTF8.GetString(output).Split(new [] { "\r\n" }, System.StringSplitOptions.None);
 
-            //Assert.AreEqual("graph 1 1.125 2.5", graphPortion[0]);
+            Assert.Equal("graph 1 1.125 2.5", graphPortion[0]);
         }
     }
 }
