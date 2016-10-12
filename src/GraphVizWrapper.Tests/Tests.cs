@@ -1,28 +1,27 @@
 ﻿using System.Diagnostics;
 using GraphVizWrapper.Queries;
 using Moq;
-using NUnit.Framework;
+using Xunit;
 
 namespace GraphVizWrapper.Tests
 {
-    using GraphVizWrapper.Commands;
+    using Commands;
 
-    [TestFixture]
     public class Tests
     {
-        private Mock<IRegisterLayoutPluginCommand> _registerLayoutPluginCommandMock;
-        private Mock<IGetProcessStartInfoQuery> _getProcessStartInfoQuery;
-        private IGetStartProcessQuery _getStartProcessQuery;
+        private readonly Mock<IRegisterLayoutPluginCommand> _registerLayoutPluginCommandMock;
+        private readonly Mock<IGetProcessStartInfoQuery> _getProcessStartInfoQuery;
+        private readonly IGetStartProcessQuery _getStartProcessQuery;
+        private const string GraphvizPath = @"C:\Program Files (x86)\GraphViz2.38";
         
-        [SetUp]
-        public void Init()
+        public Tests()
         {
             _getProcessStartInfoQuery = new Mock<IGetProcessStartInfoQuery>();
             _registerLayoutPluginCommandMock = new Mock<IRegisterLayoutPluginCommand>();
             _getStartProcessQuery = new GetStartProcessQuery();
         }
 
-        [Test]
+        [Fact]
         public void GenerateGraphReturnsByteArrayWithLengthGreaterOrEqualZero()
         {
             // Arrange
@@ -41,16 +40,17 @@ namespace GraphVizWrapper.Tests
             var wrapper = new GraphGeneration(
                 _getStartProcessQuery,
                 _getProcessStartInfoQuery.Object,
-                _registerLayoutPluginCommandMock.Object);
+                _registerLayoutPluginCommandMock.Object,
+                GraphvizPath);
 
             // Act
             byte[] output = wrapper.GenerateGraph("digraph{a -> b; b -> c; c -> a;}", Enums.GraphReturnType.Png);
 
             // Assert
-            Assert.That(output.Length, Is.GreaterThanOrEqualTo(0));
+            Assert.True(output.Length >= 0);
         }
 
-        [Test]
+        [Fact]
         public void DoesNotCrashWithLargeInput()
         {
             // Arrange
@@ -60,7 +60,8 @@ namespace GraphVizWrapper.Tests
             var wrapper = new GraphGeneration(
                 _getStartProcessQuery,
                 getProcessStartInfoQuerty,
-                registerLayoutPluginCommand);
+                registerLayoutPluginCommand,
+                GraphvizPath);
 
             // Act
 
@@ -70,7 +71,7 @@ namespace GraphVizWrapper.Tests
             byte[] output = wrapper.GenerateGraph(diagraph, Enums.GraphReturnType.Png);
         }
 
-        [Test]
+        [Fact]
         public void AllowsPlainTextOutputType() {
             // Arrange
             var getProcessStartInfoQuerty = new GetProcessStartInfoQuery();
@@ -79,17 +80,18 @@ namespace GraphVizWrapper.Tests
             var wrapper = new GraphGeneration(
                 _getStartProcessQuery,
                 getProcessStartInfoQuerty,
-                registerLayoutPluginCommand);
+                registerLayoutPluginCommand,
+                GraphvizPath);
 
             // Act
             byte[] output = wrapper.GenerateGraph("digraph{a -> b; b -> c; c -> a;}", Enums.GraphReturnType.Plain);
 
-            var graphPortion = System.Text.Encoding.Default.GetString(output).Split(new string[] { "\r\n" }, System.StringSplitOptions.None);
+            var graphPortion = System.Text.Encoding.UTF8.GetString(output).Split(new [] { "\r\n" }, System.StringSplitOptions.None);
 
-            Assert.AreEqual("graph 1 1.125 2.5", graphPortion[0]);
+            Assert.Equal("graph 1 1.125 2.5", graphPortion[0]);
         }
 
-        [Test]
+        [Fact]
         public void AllowsPlainExtTextOutputType()
         {
             // Arrange
@@ -99,14 +101,15 @@ namespace GraphVizWrapper.Tests
             var wrapper = new GraphGeneration(
                 _getStartProcessQuery,
                 getProcessStartInfoQuerty,
-                registerLayoutPluginCommand);
+                registerLayoutPluginCommand,
+                GraphvizPath);
 
             // Act
             byte[] output = wrapper.GenerateGraph("digraph{a -> b; b -> c; c -> a;}", Enums.GraphReturnType.PlainExt);
 
-            var graphPortion = System.Text.Encoding.Default.GetString(output).Split(new string[] { "\r\n" }, System.StringSplitOptions.None);
+            var graphPortion = System.Text.Encoding.UTF8.GetString(output).Split(new [] { "\r\n" }, System.StringSplitOptions.None);
 
-            Assert.AreEqual("graph 1 1.125 2.5", graphPortion[0]);
+            Assert.Equal("graph 1 1.125 2.5", graphPortion[0]);
         }
     }
 }

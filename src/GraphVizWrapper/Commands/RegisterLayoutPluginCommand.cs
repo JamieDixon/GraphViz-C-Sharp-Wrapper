@@ -9,7 +9,7 @@
 
 namespace GraphVizWrapper.Commands
 {
-    using GraphVizWrapper.Queries;
+    using Queries;
     
     public class RegisterLayoutPluginCommand : IRegisterLayoutPluginCommand
     {
@@ -32,7 +32,7 @@ namespace GraphVizWrapper.Commands
                                                      CreateNoWindow = false
                                                  });
 
-            using (_getStartProcessQuery.Invoke(processStartInfo)) { }
+            _getStartProcessQuery.Invoke(processStartInfo);
         }
 
         public void Invoke()
