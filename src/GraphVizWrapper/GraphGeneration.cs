@@ -11,7 +11,7 @@ namespace GraphVizWrapper
 {
     using System;
     using System.Collections.Generic;
-    using System.Configuration;
+    using System.Diagnostics;
     using System.IO;
     using System.Reflection;
     
@@ -26,76 +26,61 @@ namespace GraphVizWrapper
         private const string ProcessFolder = "GraphViz";
         private const string ConfigFile = "config6";
 
-        private readonly IGetStartProcessQuery startProcessQuery;
-        private readonly IGetProcessStartInfoQuery getProcessStartInfoQuery;
-        private readonly IRegisterLayoutPluginCommand registerLayoutPlugincommand;
-        private Enums.RenderingEngine renderingEngine;
-        private String graphvizPath = null;
+        private readonly IGetStartProcessQuery _startProcessQuery;
+        private readonly IGetProcessStartInfoQuery _getProcessStartInfoQuery;
+        private readonly IRegisterLayoutPluginCommand _registerLayoutPlugincommand;
+        private Enums.RenderingEngine _renderingEngine;
+        private string _graphvizPath;
 
         public GraphGeneration(IGetStartProcessQuery startProcessQuery, IGetProcessStartInfoQuery getProcessStartInfoQuery, IRegisterLayoutPluginCommand registerLayoutPlugincommand)
         {
-            this.startProcessQuery = startProcessQuery;
-            this.getProcessStartInfoQuery = getProcessStartInfoQuery;
-            this.registerLayoutPlugincommand = registerLayoutPlugincommand;
+            _startProcessQuery = startProcessQuery;
+            _getProcessStartInfoQuery = getProcessStartInfoQuery;
+            _registerLayoutPlugincommand = registerLayoutPlugincommand;
 
-            this.graphvizPath = ConfigurationManager.AppSettings["graphVizLocation"];
+            _graphvizPath = @"C:\Program Files (x86)\GraphViz2.38";
         }
 
         #region Properties
 
-        public String GraphvizPath
+        public string GraphvizPath
         {
-            get { return graphvizPath ?? AssemblyDirectory + "/" + ProcessFolder; }
+            get { return _graphvizPath ?? AssemblyDirectory + "/" + ProcessFolder; }
             set
             {
                 if (value != null && value.Trim().Length > 0)
                 {
-                    String path = value.Replace("\\", "/");
-                    graphvizPath = path.EndsWith("/") ? path.Substring(0, path.LastIndexOf('/')) : path;
+                    string path = value.Replace("\\", "/");
+                    _graphvizPath = path.EndsWith("/") ? path.Substring(0, path.LastIndexOf('/')) : path;
                 }
                 else
                 {
-                    graphvizPath = null;
+                    _graphvizPath = null;
                 }
             }
         }
         
         public Enums.RenderingEngine RenderingEngine
         {
-            get { return this.renderingEngine; }
-            set { this.renderingEngine = value; }
+            get { return _renderingEngine; }
+            set { _renderingEngine = value; }
         }
 
-        private string ConfigLocation
-        {
-            get
-            {
-                return GraphvizPath + "/" + ConfigFile;
-            }
-        }
+        private string ConfigLocation => GraphvizPath + "/" + ConfigFile;
 
-        private bool ConfigExists
-        {
-            get
-            {
-                return File.Exists(ConfigLocation);
-            }
-        }
-        
+        private bool ConfigExists => File.Exists(ConfigLocation);
+
         private static string AssemblyDirectory
         {
             get
             {
-                var uriBuilder = new UriBuilder(Assembly.GetExecutingAssembly().CodeBase);
+                var uriBuilder = new UriBuilder(Assembly.GetEntryAssembly().CodeBase);
                 string path = Uri.UnescapeDataString(uriBuilder.Path);
                 return path.Substring(0, path.LastIndexOf('/'));
             }
         }
 
-        private string FilePath
-        {
-            get { return  GraphvizPath + "/bin/" + this.GetRenderingEngine(this.renderingEngine) + ".exe"; }
-        }
+        private string FilePath => GraphvizPath + "/bin/" + GetRenderingEngine(_renderingEngine) + ".exe";
 
         #endregion
  
@@ -118,37 +103,37 @@ namespace GraphVizWrapper
 
             if (!ConfigExists)
             {
-                this.registerLayoutPlugincommand.Invoke(FilePath, this.RenderingEngine);
+                _registerLayoutPlugincommand.Invoke(FilePath, RenderingEngine);
             }
 
-            string fileType = this.GetReturnType(returnType);
+            string fileType = GetReturnType(returnType);
 
-            var processStartInfo = this.GetProcessStartInfo(fileType);
+            var processStartInfo = GetProcessStartInfo(fileType);
 
-            using (var process = this.startProcessQuery.Invoke(processStartInfo))
+            var process = _startProcessQuery.Invoke(processStartInfo);
+            
+            process.BeginErrorReadLine();
+            using (var stdIn = process.StandardInput)
             {
-                process.BeginErrorReadLine();
-                using (var stdIn = process.StandardInput)
-                {
-                    stdIn.WriteLine(dotFile);
-                }
-                using (var stdOut = process.StandardOutput)
-                {
-                    var baseStream = stdOut.BaseStream;
-                    output = this.ReadFully(baseStream);
-                }
+                stdIn.WriteLine(dotFile);
             }
+            using (var stdOut = process.StandardOutput)
+            {
+                var baseStream = stdOut.BaseStream;
+                output = ReadFully(baseStream);
+            }
+            
 
             return output;
         }
 
         #region Private Methods
         
-        private System.Diagnostics.ProcessStartInfo GetProcessStartInfo(string returnType)
+        private ProcessStartInfo GetProcessStartInfo(string returnType)
         {
-            return this.getProcessStartInfoQuery.Invoke(new ProcessStartInfoWrapper
+            return _getProcessStartInfoQuery.Invoke(new ProcessStartInfoWrapper
             {
-                FileName = this.FilePath,
+                FileName = FilePath,
                 RedirectStandardInput = true,
                 RedirectStandardOutput = true,
                 RedirectStandardError = true,
