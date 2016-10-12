@@ -32,13 +32,12 @@ namespace GraphVizWrapper
         private Enums.RenderingEngine _renderingEngine;
         private string _graphvizPath;
 
-        public GraphGeneration(IGetStartProcessQuery startProcessQuery, IGetProcessStartInfoQuery getProcessStartInfoQuery, IRegisterLayoutPluginCommand registerLayoutPlugincommand)
+        public GraphGeneration(IGetStartProcessQuery startProcessQuery, IGetProcessStartInfoQuery getProcessStartInfoQuery, IRegisterLayoutPluginCommand registerLayoutPlugincommand, string graphvizPath)
         {
             _startProcessQuery = startProcessQuery;
             _getProcessStartInfoQuery = getProcessStartInfoQuery;
             _registerLayoutPlugincommand = registerLayoutPlugincommand;
-
-            _graphvizPath = @"C:\Program Files (x86)\GraphViz2.38";
+            _graphvizPath = graphvizPath;
         }
 
         #region Properties

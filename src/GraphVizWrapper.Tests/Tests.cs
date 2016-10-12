@@ -12,6 +12,7 @@ namespace GraphVizWrapper.Tests
         private readonly Mock<IRegisterLayoutPluginCommand> _registerLayoutPluginCommandMock;
         private readonly Mock<IGetProcessStartInfoQuery> _getProcessStartInfoQuery;
         private readonly IGetStartProcessQuery _getStartProcessQuery;
+        private const string GraphvizPath = @"C:\Program Files (x86)\GraphViz2.38";
         
         public Tests()
         {
@@ -39,7 +40,8 @@ namespace GraphVizWrapper.Tests
             var wrapper = new GraphGeneration(
                 _getStartProcessQuery,
                 _getProcessStartInfoQuery.Object,
-                _registerLayoutPluginCommandMock.Object);
+                _registerLayoutPluginCommandMock.Object,
+                GraphvizPath);
 
             // Act
             byte[] output = wrapper.GenerateGraph("digraph{a -> b; b -> c; c -> a;}", Enums.GraphReturnType.Png);
@@ -58,7 +60,8 @@ namespace GraphVizWrapper.Tests
             var wrapper = new GraphGeneration(
                 _getStartProcessQuery,
                 getProcessStartInfoQuerty,
-                registerLayoutPluginCommand);
+                registerLayoutPluginCommand,
+                GraphvizPath);
 
             // Act
 
@@ -77,7 +80,8 @@ namespace GraphVizWrapper.Tests
             var wrapper = new GraphGeneration(
                 _getStartProcessQuery,
                 getProcessStartInfoQuerty,
-                registerLayoutPluginCommand);
+                registerLayoutPluginCommand,
+                GraphvizPath);
 
             // Act
             byte[] output = wrapper.GenerateGraph("digraph{a -> b; b -> c; c -> a;}", Enums.GraphReturnType.Plain);
@@ -97,7 +101,8 @@ namespace GraphVizWrapper.Tests
             var wrapper = new GraphGeneration(
                 _getStartProcessQuery,
                 getProcessStartInfoQuerty,
-                registerLayoutPluginCommand);
+                registerLayoutPluginCommand,
+                GraphvizPath);
 
             // Act
             byte[] output = wrapper.GenerateGraph("digraph{a -> b; b -> c; c -> a;}", Enums.GraphReturnType.PlainExt);
