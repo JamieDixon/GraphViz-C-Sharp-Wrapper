@@ -1,5 +1,4 @@
 ﻿using System.Diagnostics;
-using System.IO;
 using GraphVizWrapper.Queries;
 using Moq;
 using Xunit;
@@ -82,8 +81,6 @@ namespace GraphVizWrapper.Tests
 
             // Act
             byte[] output = wrapper.GenerateGraph("digraph{a -> b; b -> c; c -> a;}", Enums.GraphReturnType.Plain);
-
-            File.WriteAllBytes("C:\\Temp\\output.dat", output);
 
             var graphPortion = System.Text.Encoding.UTF8.GetString(output).Split(new [] { "\r\n" }, System.StringSplitOptions.None);
 
