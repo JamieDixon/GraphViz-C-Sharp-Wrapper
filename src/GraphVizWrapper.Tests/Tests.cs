@@ -54,12 +54,12 @@ namespace GraphVizWrapper.Tests
         public void DoesNotCrashWithLargeInput()
         {
             // Arrange
-            var getProcessStartInfoQuerty = new GetProcessStartInfoQuery();
-            var registerLayoutPluginCommand = new RegisterLayoutPluginCommand(getProcessStartInfoQuerty, _getStartProcessQuery);
+            var getProcessStartInfoQuery = new GetProcessStartInfoQuery();
+            var registerLayoutPluginCommand = new RegisterLayoutPluginCommand(getProcessStartInfoQuery, _getStartProcessQuery);
 
             var wrapper = new GraphGeneration(
                 _getStartProcessQuery,
-                getProcessStartInfoQuerty,
+                getProcessStartInfoQuery,
                 registerLayoutPluginCommand);
 
             // Act
@@ -73,12 +73,12 @@ namespace GraphVizWrapper.Tests
         [Test]
         public void AllowsPlainTextOutputType() {
             // Arrange
-            var getProcessStartInfoQuerty = new GetProcessStartInfoQuery();
-            var registerLayoutPluginCommand = new RegisterLayoutPluginCommand(getProcessStartInfoQuerty, _getStartProcessQuery);
+            var getProcessStartInfoQuery = new GetProcessStartInfoQuery();
+            var registerLayoutPluginCommand = new RegisterLayoutPluginCommand(getProcessStartInfoQuery, _getStartProcessQuery);
 
             var wrapper = new GraphGeneration(
                 _getStartProcessQuery,
-                getProcessStartInfoQuerty,
+                getProcessStartInfoQuery,
                 registerLayoutPluginCommand);
 
             // Act
@@ -93,12 +93,12 @@ namespace GraphVizWrapper.Tests
         public void AllowsPlainExtTextOutputType()
         {
             // Arrange
-            var getProcessStartInfoQuerty = new GetProcessStartInfoQuery();
-            var registerLayoutPluginCommand = new RegisterLayoutPluginCommand(getProcessStartInfoQuerty, _getStartProcessQuery);
+            var getProcessStartInfoQuery = new GetProcessStartInfoQuery();
+            var registerLayoutPluginCommand = new RegisterLayoutPluginCommand(getProcessStartInfoQuery, _getStartProcessQuery);
 
             var wrapper = new GraphGeneration(
                 _getStartProcessQuery,
-                getProcessStartInfoQuerty,
+                getProcessStartInfoQuery,
                 registerLayoutPluginCommand);
 
             // Act

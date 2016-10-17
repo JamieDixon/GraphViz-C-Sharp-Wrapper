@@ -94,7 +94,7 @@ namespace GraphVizWrapper
 
         private string FilePath
         {
-            get { return  GraphvizPath + "/bin/" + this.GetRenderingEngine(this.renderingEngine) + ".exe"; }
+            get { return  GraphvizPath + this.GetRenderingEngine(this.renderingEngine) + ".exe"; }
         }
 
         #endregion
