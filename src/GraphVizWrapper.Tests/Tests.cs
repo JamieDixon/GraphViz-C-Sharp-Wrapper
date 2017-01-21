@@ -13,7 +13,7 @@ namespace GraphVizWrapper.Tests
         private Mock<IRegisterLayoutPluginCommand> _registerLayoutPluginCommandMock;
         private Mock<IGetProcessStartInfoQuery> _getProcessStartInfoQuery;
         private IGetStartProcessQuery _getStartProcessQuery;
-        
+
         [SetUp]
         public void Init()
         {

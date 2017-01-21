@@ -14,7 +14,7 @@ namespace GraphVizWrapper
     using System.Configuration;
     using System.IO;
     using System.Reflection;
-    
+
     using Commands;
     using Queries;
 
@@ -59,7 +59,7 @@ namespace GraphVizWrapper
                 }
             }
         }
-        
+
         public Enums.RenderingEngine RenderingEngine
         {
             get { return this.renderingEngine; }
@@ -81,7 +81,7 @@ namespace GraphVizWrapper
                 return File.Exists(ConfigLocation);
             }
         }
-        
+
         private static string AssemblyDirectory
         {
             get
@@ -94,11 +94,11 @@ namespace GraphVizWrapper
 
         private string FilePath
         {
-            get { return  GraphvizPath + this.GetRenderingEngine(this.renderingEngine) + ".exe"; }
+            get { return  GraphvizPath + "\\" + this.GetRenderingEngine(this.renderingEngine) + ".exe"; }
         }
 
         #endregion
- 
+
         /// <summary>
         /// Generates a graph based on the dot file passed in.
         /// </summary>
@@ -143,7 +143,7 @@ namespace GraphVizWrapper
         }
 
         #region Private Methods
-        
+
         private System.Diagnostics.ProcessStartInfo GetProcessStartInfo(string returnType)
         {
             return this.getProcessStartInfoQuery.Invoke(new ProcessStartInfoWrapper
