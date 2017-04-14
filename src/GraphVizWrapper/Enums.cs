@@ -30,9 +30,7 @@ namespace GraphVizWrapper
             Fdp,
             Sfdp,
             Patchwork,
-            Osage 
-
-
+            Osage
         }
     }
 }
