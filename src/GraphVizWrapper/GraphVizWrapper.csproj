@@ -1,70 +1,34 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>8.0.30703</ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{CFEC60DC-14E0-47E4-A60E-8919FB5FEF5D}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>GraphVizWrapper</RootNamespace>
+    <Copyright>JamieDixon</Copyright>
+    <AssemblyTitle>GraphVizWrapper</AssemblyTitle>
+    <TargetFramework>netstandard2.0</TargetFramework>
     <AssemblyName>GraphVizWrapper</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
+    <PackageId>GraphVizWrapper</PackageId>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Version>1.0.0</Version>
+    <PackageProjectUrl>https://github.com/JamieDixon/GraphViz-C-Sharp-Wrapper</PackageProjectUrl>
+    <PackageIconUrl>https://cloud.githubusercontent.com/assets/1519443/8213182/0afa9bb4-1518-11e5-9d8b-8a3a9a0cecfa.png</PackageIconUrl>
+    <RepositoryUrl>https://github.com/JamieDixon/GraphViz-C-Sharp-Wrapper</RepositoryUrl>
+    <RepositoryType>GIT</RepositoryType>
+    <PackageTags>GraphViz</PackageTags>
+    <PackageReleaseNotes>Ported to netstandard 2.0</PackageReleaseNotes>
+    <Authors>Jamie Dixon</Authors>
+    <Company>Jamie Dixon</Company>
+    <Description>This is a C# wrapper for the GraphViz graph generator.
+       Pass in a dot string and an output type and voila, your graph is generated.
+       The output file is returned to you as a byte array to do as you please.
+       This library acts as a wrapper for the GraphViz command line tools.
+
+       Once installed, a new element will be added to your web.config or app.config with the key "graphVizLocation". Use this to specify to folder containing your installation of graphviz.</Description>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
+
   <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="System.configuration" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Xml" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="4.4.0" />
   </ItemGroup>
+
   <ItemGroup>
-    <Compile Include="ProcessStartInfoWrapper.cs" />
-    <Compile Include="Enums.cs" />
-    <Compile Include="Commands\IRegisterLayoutPluginCommand.cs" />
-    <Compile Include="Commands\ICommand.cs" />
-    <Compile Include="IProcessStartInfoWrapper.cs" />
-    <Compile Include="Queries\IQuery.cs" />
-    <Compile Include="Queries\GetStartProcessQuery.cs" />
-    <Compile Include="Queries\GetProcessStartInfoQuery.cs" />
-    <Compile Include="GraphGeneration.cs" />
-    <Compile Include="IGraphGeneration.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Commands\RegisterLayoutPluginCommand.cs" />
-    <Compile Include="Queries\IGetProcessStartInfoQuery.cs" />
-    <Compile Include="Queries\IGetStartProcessQuery.cs" />
+    <Folder Include="Properties\" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
 </Project>
